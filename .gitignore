@@ -1,0 +1,41 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Electron
+dist/
+dist-electron/
+out/
+*.exe
+*.dmg
+*.app
+*.msi
+*.snap
+*.AppImage
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.env.local
+.env.*.local
+
+# Build outputs
+build/
+release/
+*.asar
+
+# IDE
+.idea/
+.vscode/
+*.sublime-*
+
+# Logs
+logs/
+*.log

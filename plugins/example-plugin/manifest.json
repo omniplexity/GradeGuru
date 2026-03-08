@@ -1,0 +1,18 @@
+{
+  "id": "example-plugin",
+  "name": "Example Plugin",
+  "version": "1.0.0",
+  "description": "A comprehensive example plugin demonstrating plugin development for OmniAI Desktop. Includes greeting, calculator, and conversation tools.",
+  "author": "OmniAI Team",
+  "main": "index.js",
+  "permissions": {
+    "network": true,
+    "filesystem": false,
+    "commands": true,
+    "events": true,
+    "ui": true,
+    "settings": true,
+    "conversation": true
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com;">
+  <title>OmniAI Desktop</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <button class="new-chat-btn" id="newChatBtn" aria-label="Start new chat">
+          <i class="fas fa-plus"></i>
+          <span>New Chat</span>
+        </button>
+      </div>
+      
+      <div class="sidebar-content">
+        <div class="conversations-list" id="conversationsList">
+          <!-- Conversations will be dynamically inserted here -->
+          <div class="conversation-item active">
+            <i class="fas fa-message"></i>
+            <span>New Conversation</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="sidebar-footer">
+        <div class="model-selector">
+          <label for="modelSelect" class="sr-only">Select AI Model</label>
+          <select id="modelSelect" aria-label="AI Model Selection">
+            <option value="">Loading models...</option>
+          </select>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        
+        <button class="sidebar-action-btn" id="settingsBtn" aria-label="Settings">
+          <i class="fas fa-cog"></i>
+          <span>Settings</span>
+        </button>
+      </div>
+    </aside>
+    
+    <!-- Main Chat Area -->
+    <main class="chat-area" id="chatArea">
+      <!-- Chat Header -->
+      <header class="chat-header">
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle sidebar">
+          <i class="fas fa-bars"></i>
+        </button>
+        <h1 class="chat-title">OmniAI</h1>
+        <div class="chat-header-actions">
+          <button class="icon-btn" id="clearChatBtn" aria-label="Clear chat">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </div>
+      </header>
+      
+      <!-- Messages Container -->
+      <div class="messages-container" id="messagesContainer">
+        <!-- Welcome Message -->
+        <div class="welcome-message" id="welcomeMessage">
+          <div class="welcome-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h2>How can I help you today?</h2>
+          <p>I can assist you with writing, analysis, coding, and more.</p>
+        </div>
+        
+        <!-- Messages will be dynamically inserted here -->
+        <div class="messages-list" id="messagesList"></div>
+      </div>
+      
+      <!-- Input Area -->
+      <div class="input-area" id="inputArea">
+        <div class="input-container">
+          <textarea 
+            id="messageInput" 
+            placeholder="Message OmniAI..." 
+            rows="1"
+            aria-label="Message input"
+          ></textarea>
+          <button class="send-btn" id="sendBtn" aria-label="Send message" disabled>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+        <p class="input-hint">AI can make mistakes. Please verify important information.</p>
+      </div>
+    </main>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>

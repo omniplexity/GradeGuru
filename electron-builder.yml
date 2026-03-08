@@ -1,0 +1,37 @@
+appId: com.omniai.desktop
+productName: OmniAI Desktop
+
+directories:
+  output: dist
+  buildResources: build
+
+files:
+  - "!**/.vscode/*"
+  - "!src/*"
+  - "!electron-builder.yml"
+  - "!{.eslintignore,.eslintrc.js,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}"
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+    - target: portable
+      arch:
+        - x64
+  icon: build/icon.ico
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  installerIcon: build/icon.ico
+  uninstallerIcon: build/icon.ico
+  installerHeaderIcon: build/icon.ico
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: OmniAI Desktop
+
+portable:
+  artifactName: "${productName}-${version}-portable.${ext}"
+
+publish: null
