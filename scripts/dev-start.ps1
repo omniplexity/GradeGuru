@@ -1,4 +1,4 @@
-# OmniAI Desktop - Development Start Script (Windows/PowerShell)
+# GradeGuru - Development Start Script (Windows/PowerShell)
 # This script starts the application in development mode using Electron
 # 
 # Usage: .\scripts\dev-start.ps1
@@ -38,7 +38,7 @@ function Handle-Error {
 # ============================================================================
 
 Write-Host "============================================" -ForegroundColor Cyan
-Write-Host "  OmniAI Desktop - Development Mode" -ForegroundColor Cyan
+Write-Host "  GradeGuru - Development Mode" -ForegroundColor Cyan
 Write-Host "============================================" -ForegroundColor Cyan
 Write-Host ""
 
@@ -79,7 +79,7 @@ Write-Host ""
 # START ELECTRON IN DEVELOPMENT MODE
 # ============================================================================
 
-Write-Host "Starting OmniAI Desktop in development mode..." -ForegroundColor Cyan
+Write-Host "Starting GradeGuru in development mode..." -ForegroundColor Cyan
 Write-Host "Press Ctrl+C to stop the application" -ForegroundColor Yellow
 Write-Host ""
 

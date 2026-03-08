@@ -1,5 +1,5 @@
 /**
- * OmniAI Desktop - Basic Tests
+ * GradeGuru - Basic Tests
  * Tests for utility functions (message formatting, API helpers, config helpers)
  * 
  * Note: Full tests for Model Router, Conversation Store, and Plugin Manager require

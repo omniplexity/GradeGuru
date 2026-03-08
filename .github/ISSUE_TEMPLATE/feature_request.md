@@ -1,6 +1,6 @@
 ---
 name: Feature Request
-about: Suggest a new feature or improvement for OmniAI Desktop
+about: Suggest a new feature or improvement for GradeGuru
 title: '[Feature] '
 labels: enhancement
 assignees: ''

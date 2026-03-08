@@ -1,6 +1,6 @@
-# OmniAI Desktop Architecture
+# GradeGuru Architecture
 
-This document provides a comprehensive overview of the OmniAI Desktop system architecture, including the UI layer, backend model routing, plugin architecture, and execution models.
+This document provides a comprehensive overview of the GradeGuru system architecture, including the UI layer, backend model routing, plugin architecture, and execution models.
 
 ## Table of Contents
 
@@ -16,13 +16,13 @@ This document provides a comprehensive overview of the OmniAI Desktop system arc
 
 ## System Architecture Overview
 
-OmniAI Desktop is built on Electron, a framework that allows building cross-platform desktop applications using web technologies. The application follows a **multi-process architecture** with distinct responsibilities for each layer.
+GradeGuru is built on Electron, a framework that allows building cross-platform desktop applications using web technologies. The application follows a **multi-process architecture** with distinct responsibilities for each layer.
 
 ### High-Level Architecture
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│                         OMNIAI DESKTOP                                  │
+│                         GRADEGURU                                  │
 ├────────────────────────────────────────────────────────────────────────┤
 │                                                                        │
 │  ┌──────────────────────────────┐    ┌──────────────────────────┐     │
@@ -287,7 +287,7 @@ All providers use an OpenAI-compatible request format:
 
 ## Plugin Architecture
 
-The plugin system allows extending OmniAI Desktop with custom functionality. Plugins run in a sandboxed environment within the main process.
+The plugin system allows extending GradeGuru with custom functionality. Plugins run in a sandboxed environment within the main process.
 
 ### Plugin System Architecture
 
@@ -389,7 +389,7 @@ const pluginAPI = {
 
 ## Local vs Remote Model Execution
 
-OmniAI Desktop supports both local and remote model execution, each with distinct characteristics and use cases.
+GradeGuru supports both local and remote model execution, each with distinct characteristics and use cases.
 
 ### Local Execution
 
@@ -398,7 +398,7 @@ OmniAI Desktop supports both local and remote model execution, each with distinc
 │                     LOCAL EXECUTION                             │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
-│   OMNIAI DESKTOP                    LOCAL MODEL SERVER          │
+│   GRADEGURU                    LOCAL MODEL SERVER          │
 │  ┌─────────────────┐              ┌─────────────────┐          │
 │  │                 │    HTTP      │                 │          │
 │  │  Model Router   │◄────────────►│  LM Studio      │          │
@@ -428,7 +428,7 @@ OmniAI Desktop supports both local and remote model execution, each with distinc
 │                     REMOTE EXECUTION                            │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
-│   OMNIAI DESKTOP                    REMOTE API                 │
+│   GRADEGURU                    REMOTE API                 │
 │  ┌─────────────────┐              ┌─────────────────┐          │
 │  │                 │    HTTPS     │                 │          │
 │  │  Model Router   │◄────────────►│  OpenAI API     │          │

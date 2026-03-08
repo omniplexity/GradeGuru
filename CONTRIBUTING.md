@@ -1,6 +1,6 @@
-# Contributing to OmniAI Desktop
+# Contributing to GradeGuru
 
-Thank you for your interest in contributing to OmniAI Desktop! This document provides guidelines for contributing to the project. By participating in this project, you agree to abide by these guidelines.
+Thank you for your interest in contributing to GradeGuru! This document provides guidelines for contributing to the project. By participating in this project, you agree to abide by these guidelines.
 
 ## Table of Contents
 
@@ -22,8 +22,8 @@ Thank you for your interest in contributing to OmniAI Desktop! This document pro
 2. **Clone Your Fork**: Clone your forked repository to your local machine.
 
    ```bash
-   git clone https://github.com/YOUR-USERNAME/omni-ai-desktop.git
-   cd omni-ai-desktop
+   git clone https://github.com/YOUR-USERNAME/gradeguru.git
+   cd gradeguru
    ```
 
 3. **Create a Branch**: Create a new branch for your feature or bug fix.
@@ -324,4 +324,4 @@ If you have questions about contributing, feel free to:
 - Ask in the issue tracker
 - Reach out to maintainers
 
-Thank you for contributing to OmniAI Desktop!
+Thank you for contributing to GradeGuru!

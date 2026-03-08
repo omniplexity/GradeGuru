@@ -1,5 +1,5 @@
 /**
- * OmniAI Desktop - Main Process Entry Point
+ * GradeGuru - Main Process Entry Point
  * Electron main process handling app lifecycle, IPC, and window management
  */
 

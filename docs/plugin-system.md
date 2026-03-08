@@ -1,6 +1,6 @@
-# OmniAI Desktop Plugin System
+# GradeGuru Plugin System
 
-This document provides comprehensive documentation for the OmniAI Desktop plugin system, including the plugin API, lifecycle management, permissions, and examples for creating new plugins.
+This document provides comprehensive documentation for the GradeGuru plugin system, including the plugin API, lifecycle management, permissions, and examples for creating new plugins.
 
 ## Table of Contents
 
@@ -17,7 +17,7 @@ This document provides comprehensive documentation for the OmniAI Desktop plugin
 
 ## Overview
 
-The OmniAI Desktop plugin system allows developers to extend the application's functionality through a modular, secure architecture. Plugins can:
+The GradeGuru plugin system allows developers to extend the application's functionality through a modular, secure architecture. Plugins can:
 
 - Add custom AI capabilities
 - Integrate with external services

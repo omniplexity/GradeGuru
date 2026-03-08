@@ -1,5 +1,5 @@
 /**
- * OmniAI Desktop Example Plugin
+ * GradeGuru Desktop Example Plugin
  * 
  * This is a comprehensive example plugin that demonstrates:
  * - Plugin registration and metadata
@@ -21,7 +21,7 @@
 
 /**
  * Plugin definition object
- * This is the main export that OmniAI Desktop uses to load and manage the plugin.
+ * This is the main export that GradeGuru Desktop uses to load and manage the plugin.
  * 
  * @property {string} name - Unique identifier for the plugin (kebab-case)
  * @property {string} version - Semantic version (x.y.z)
@@ -35,7 +35,7 @@ const plugin = {
   name: 'example-plugin',
   version: '1.0.0',
   description: 'Example plugin demonstrating plugin development with tools and events',
-  author: 'OmniAI Team',
+  author: 'GradeGuru Team',
 
   // ---------------------------------------------------------------------------
   // State - Internal state for the plugin
@@ -72,7 +72,7 @@ const plugin = {
   // =============================================================================
   // LIFECYCLE HOOKS
   // =============================================================================
-  // Lifecycle hooks are called by OmniAI Desktop at different stages
+  // Lifecycle hooks are called by GradeGuru Desktop at different stages
   // of the plugin's lifecycle. Use them to initialize, start, stop,
   // and clean up your plugin.
   // =============================================================================
@@ -682,7 +682,7 @@ const plugin = {
 
 /**
  * Export the plugin definition
- * This is what OmniAI Desktop loads when enabling the plugin
+ * This is what GradeGuru Desktop loads when enabling the plugin
  */
 module.exports = plugin;
 

@@ -1,24 +1,24 @@
-# OmniAI Desktop
+# GradeGuru
 
 <p align="center">
-  <img src="build/icon.png" alt="OmniAI Desktop Logo" width="128" height="128" />
+  <img src="build/icon.png" alt="GradeGuru Logo" width="128" height="128" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/your-org/omni-ai-desktop/releases">
-    <img src="https://img.shields.io/github/v/release/your-org/omni-ai-desktop" alt="Latest Release" />
+  <a href="https://github.com/your-org/gradeguru/releases">
+    <img src="https://img.shields.io/github/v/release/your-org/gradeguru" alt="Latest Release" />
   </a>
-  <a href="https://github.com/your-org/omni-ai-desktop/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/your-org/omni-ai-desktop" alt="License" />
+  <a href="https://github.com/your-org/gradeguru/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/your-org/gradeguru" alt="License" />
   </a>
-  <a href="https://github.com/your-org/omni-ai-desktop/actions">
-    <img src="https://img.shields.io/github/actions/workflow/status/your-org/omni-ai-desktop/main.yml" alt="Build Status" />
+  <a href="https://github.com/your-org/gradeguru/actions">
+    <img src="https://img.shields.io/github/actions/workflow/status/your-org/gradeguru/main.yml" alt="Build Status" />
   </a>
 </p>
 
 ## Overview
 
-OmniAI Desktop is a powerful Windows desktop AI assistant application that provides a unified interface for interacting with multiple AI models. Similar to ChatGPT's desktop application, OmniAI Desktop brings the power of artificial intelligence directly to your desktop with support for both local and remote inference engines.
+GradeGuru is a desktop AI assistant application that provides a unified interface for interacting with multiple AI models. Similar to ChatGPT's desktop application, GradeGuru brings the power of artificial intelligence directly to your desktop with support for both local and remote inference engines.
 
 ### Key Features
 
@@ -35,7 +35,7 @@ OmniAI Desktop is a powerful Windows desktop AI assistant application that provi
 ### Main Chat Interface
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│  OmniAI Desktop                                    ─ □ ✕  │
+│  GradeGuru                                    ─ □ ✕  │
 ├─────────────────────────────────────────────────────────────┤
 │  [Model: GPT-4 ▼]                          [⚙️ Settings]    │
 ├─────────────────────────────────────────────────────────────┤
@@ -86,7 +86,7 @@ OmniAI Desktop is a powerful Windows desktop AI assistant application that provi
 
 ## Architecture Overview
 
-OmniAI Desktop follows a modern desktop application architecture built on Electron. The application is divided into three main layers:
+GradeGuru follows a modern desktop application architecture built on Electron. The application is divided into three main layers:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -135,7 +135,7 @@ For detailed architecture information, see [Architecture Documentation](docs/arc
 
 ### Prerequisites
 
-Before installing OmniAI Desktop, ensure you have the following:
+Before installing GradeGuru, ensure you have the following:
 
 - **Operating System**: Windows 10/11 (64-bit)
 - **Node.js**: Version 18.x or higher
@@ -146,8 +146,8 @@ Before installing OmniAI Desktop, ensure you have the following:
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-org/omni-ai-desktop.git
-   cd omni-ai-desktop
+   git clone https://github.com/your-org/gradeguru.git
+   cd gradeguru
    ```
 
 2. **Install Dependencies**
@@ -167,10 +167,10 @@ Before installing OmniAI Desktop, ensure you have the following:
 
 ### Pre-built Releases
 
-Download pre-built executables from the [Releases Page](https://github.com/your-org/omni-ai-desktop/releases):
+Download pre-built executables from the [Releases Page](https://github.com/your-org/gradeguru/releases):
 
-- **NSIS Installer**: `OmniAI-Desktop-Setup-x.x.x.exe`
-- **Portable Version**: `OmniAI-Desktop-x.x.x-portable.exe`
+- **NSIS Installer**: `GradeGuru-Setup-x.x.x.exe`
+- **Portable Version**: `GradeGuru-x.x.x-portable.exe`
 
 ## Development Setup
 
@@ -211,7 +211,7 @@ npm run lint
 
 ## Plugin Overview
 
-OmniAI Desktop features a powerful plugin system that allows developers to extend functionality. Plugins can:
+GradeGuru features a powerful plugin system that allows developers to extend functionality. Plugins can:
 
 - Add custom AI capabilities
 - Integrate with external services
@@ -294,7 +294,7 @@ We'd love to hear your ideas! Please open an issue with:
 
 ## Roadmap
 
-OmniAI Desktop is developed in phases. For detailed roadmap information, see [Roadmap Documentation](docs/roadmap.md).
+GradeGuru is developed in phases. For detailed roadmap information, see [Roadmap Documentation](docs/roadmap.md).
 
 ### Current Phase: Phase 1 — Core Desktop Client
 
@@ -325,11 +325,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Support
 
 - **Documentation**: Check the [docs](docs/) folder
-- **Issues**: Report bugs on [GitHub Issues](https://github.com/your-org/omni-ai-desktop/issues)
-- **Discussions**: Join the conversation on [GitHub Discussions](https://github.com/your-org/omni-ai-desktop/discussions)
+- **Issues**: Report bugs on [GitHub Issues](https://github.com/your-org/gradeguru/issues)
+- **Discussions**: Join the conversation on [GitHub Discussions](https://github.com/your-org/gradeguru/discussions)
 
 ---
 
 <p align="center">
-  Made with ❤️ by the OmniAI Team
+  Made with ❤️ by the GradeGuru Team
 </p>

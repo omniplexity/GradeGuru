@@ -1,5 +1,5 @@
 /**
- * OmniAI Desktop - Message Component
+ * GradeGuru - Message Component
  * Renders individual messages with formatting support
  */
 

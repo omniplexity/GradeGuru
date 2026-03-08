@@ -1,5 +1,5 @@
 /**
- * OmniAI Desktop - Plugin Manager
+ * GradeGuru - Plugin Manager
  * Handles plugin discovery, loading, lifecycle management,
  * API exposure, event handling, and permissions.
  */

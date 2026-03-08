@@ -1,5 +1,5 @@
 #!/bin/bash
-# OmniAI Desktop - Development Start Script (Bash/Cross-Platform)
+# GradeGuru - Development Start Script (Bash/Cross-Platform)
 # This script starts the application in development mode using Electron
 # 
 # Usage: ./scripts/dev-start.sh
@@ -44,7 +44,7 @@ error_exit() {
 # ============================================================================
 
 echo "============================================"
-echo "  OmniAI Desktop - Development Mode"
+echo "  GradeGuru - Development Mode"
 echo "============================================"
 echo ""
 
@@ -75,7 +75,7 @@ echo ""
 # START ELECTRON IN DEVELOPMENT MODE
 # ============================================================================
 
-echo "Starting OmniAI Desktop in development mode..."
+echo "Starting GradeGuru in development mode..."
 echo "Press Ctrl+C to stop the application"
 echo ""
 

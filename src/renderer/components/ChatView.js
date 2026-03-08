@@ -1,5 +1,5 @@
 /**
- * OmniAI Desktop - ChatView Component
+ * GradeGuru - ChatView Component
  * Manages chat display and message handling
  */
 

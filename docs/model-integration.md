@@ -1,6 +1,6 @@
-# OmniAI Desktop Model Integration Guide
+# GradeGuru Model Integration Guide
 
-This guide explains how to integrate various AI models and inference engines with OmniAI Desktop, including LM Studio, Ollama, OpenAI, and custom APIs.
+This guide explains how to integrate various AI models and inference engines with GradeGuru, including LM Studio, Ollama, OpenAI, and custom APIs.
 
 ## Table of Contents
 
@@ -17,7 +17,7 @@ This guide explains how to integrate various AI models and inference engines wit
 
 ## Overview
 
-OmniAI Desktop supports multiple AI model providers through a unified adapter system. Each provider is implemented as an adapter that translates requests into the provider's specific API format.
+GradeGuru supports multiple AI model providers through a unified adapter system. Each provider is implemented as an adapter that translates requests into the provider's specific API format.
 
 ### Supported Providers
 
@@ -91,7 +91,7 @@ LM Studio is a desktop application for running local AI models. It provides an O
 
 ### Configuration
 
-In OmniAI Desktop settings, configure LM Studio:
+In GradeGuru settings, configure LM Studio:
 
 ```json
 {
@@ -320,7 +320,7 @@ curl https://api.openai.com/v1/models \
 
 ## Custom API Integration
 
-OmniAI Desktop can connect to any OpenAI-compatible API, allowing integration with:
+GradeGuru can connect to any OpenAI-compatible API, allowing integration with:
 
 - Self-hosted OpenAI-compatible servers
 - Local inference engines
@@ -363,7 +363,7 @@ OmniAI Desktop can connect to any OpenAI-compatible API, allowing integration wi
 docker run -p 8080:8080 localai/localai:latest
 ```
 
-2. Configure OmniAI Desktop:
+2. Configure GradeGuru:
 
 ```json
 {

@@ -1,5 +1,5 @@
 /**
- * OmniAI Desktop - Renderer Application
+ * GradeGuru - Renderer Application
  * Main application JavaScript for the chat interface
  */
 
@@ -171,7 +171,7 @@ async function handleModelChange(event) {
 // ====================
 function loadConversations() {
   // Load conversations from localStorage
-  const stored = localStorage.getItem('omniAI_conversations');
+  const stored = localStorage.getItem('gradeguru_conversations');
   if (stored) {
     AppState.conversations = JSON.parse(stored);
     renderConversations();
@@ -214,7 +214,7 @@ function selectConversation(conversationId) {
 }
 
 function saveConversations() {
-  localStorage.setItem('omniAI_conversations', JSON.stringify(AppState.conversations));
+  localStorage.setItem('gradeguru_conversations', JSON.stringify(AppState.conversations));
 }
 
 function renderConversations() {

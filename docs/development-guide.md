@@ -1,4 +1,4 @@
-# OmniAI Desktop Development Guide
+# GradeGuru Development Guide
 
 This guide provides comprehensive instructions for setting up a development environment, running the application, and following coding standards.
 
@@ -31,7 +31,7 @@ This guide provides comprehensive instructions for setting up a development envi
 
 #### 1. Node.js
 
-OmniAI Desktop requires Node.js 18.x or higher.
+GradeGuru requires Node.js 18.x or higher.
 
 **Installation:**
 
@@ -91,10 +91,10 @@ For local AI inference, install one of:
 cd C:\Users\YourName\Projects
 
 # Clone the repository
-git clone https://github.com/your-org/omni-ai-desktop.git
+git clone https://github.com/your-org/grade-guru.git
 
 # Navigate into the project
-cd omni-ai-desktop
+cd grade-guru
 ```
 
 ### 2. Install Dependencies
@@ -120,7 +120,7 @@ npm ls --depth=0
 Expected output:
 
 ```
-omni-ai-desktop@1.0.0
+grade-guru@1.0.0
 ├── electron@28.0.0
 ├── electron-builder@24.9.0
 ├── eslint@8.0.0
@@ -151,10 +151,10 @@ This will:
 When running `npm run dev`, you'll see:
 
 ```
-> omni-ai-desktop@1.0.0 dev
+> grade-guru@1.0.0 dev
 > electron .
 
-[App] Starting OmniAI Desktop...
+[App] Starting GradeGuru...
 [Main] Main process initialized
 [Renderer] Loading UI components...
 [Main] Window ready, displaying window
@@ -178,7 +178,7 @@ Understanding the project structure is essential for effective development.
 ### Directory Overview
 
 ```
-omni-ai-desktop/
+grade-guru/
 ├── .github/                    # GitHub workflows and templates
 ├── build/                      # Build resources (icons, etc.)
 ├── dist/                       # Built application output
@@ -533,10 +533,10 @@ After building, you'll find:
 ```
 dist/
 ├── win-unpacked/              # Unpacked application
-│   └── OmniAI Desktop.exe
+│   └── GradeGuru Desktop.exe
 │
-├── OmniAI-Desktop-1.0.0 Setup.exe    # NSIS Installer
-└── OmniAI-Desktop-1.0.0-portable.exe # Portable version
+├── GradeGuru-1.0.0 Setup.exe    # NSIS Installer
+└── GradeGuru-1.0.0-portable.exe # Portable version
 ```
 
 ### Building for Different Platforms
@@ -600,7 +600,7 @@ npm install electron --save-dev
 
 ### Getting Help
 
-1. Check [GitHub Issues](https://github.com/your-org/omni-ai-desktop/issues)
+1. Check [GitHub Issues](https://github.com/your-org/grade-guru/issues)
 2. Search existing discussions
 3. Create a new issue with:
    - Steps to reproduce

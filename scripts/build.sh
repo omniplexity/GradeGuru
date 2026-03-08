@@ -1,5 +1,5 @@
 #!/bin/bash
-# OmniAI Desktop - Production Build Script (Bash/Cross-Platform)
+# GradeGuru - Production Build Script (Bash/Cross-Platform)
 # This script builds the application for production distribution using electron-builder
 # 
 # Usage: ./scripts/build.sh
@@ -102,7 +102,7 @@ if [ ! -t 1 ]; then
 fi
 
 echo "============================================"
-echo "  OmniAI Desktop - Production Build"
+echo "  GradeGuru - Production Build"
 echo "============================================"
 echo ""
 

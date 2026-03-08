@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-about: Create a report to help us improve OmniAI Desktop
+about: Create a report to help us improve GradeGuru
 title: '[Bug] '
 labels: bug
 assignees: ''

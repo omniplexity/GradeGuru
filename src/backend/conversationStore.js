@@ -1,5 +1,5 @@
 /**
- * OmniAI Desktop - Conversation Store
+ * GradeGuru - Conversation Store
  * Handles conversation persistence, message history management,
  * and export/import functionality.
  */

@@ -104,7 +104,7 @@ If you believe someone is violating the code of conduct, we ask that you report 
 
 ## Communication Channels
 
-This Code of Conduct applies to all OmniAI Desktop community spaces, including but not limited to:
+This Code of Conduct applies to all GradeGuru community spaces, including but not limited to:
 
 - GitHub Issues and Pull Requests
 - GitHub Discussions

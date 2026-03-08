@@ -1,6 +1,6 @@
-# OmniAI Desktop Roadmap
+# GradeGuru Roadmap
 
-This document outlines the development roadmap for OmniAI Desktop, organized into five major phases. Each phase builds upon the previous one to create a comprehensive AI assistant platform.
+This document outlines the development roadmap for GradeGuru, organized into five major phases. Each phase builds upon the previous one to create a comprehensive AI assistant platform.
 
 ## Table of Contents
 
@@ -16,7 +16,7 @@ This document outlines the development roadmap for OmniAI Desktop, organized int
 
 ## Overview
 
-OmniAI Desktop is being developed in five phases, each focusing on specific features and capabilities:
+GradeGuru is being developed in five phases, each focusing on specific features and capabilities:
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
@@ -53,7 +53,7 @@ OmniAI Desktop is being developed in five phases, each focusing on specific feat
 
 ### Overview
 
-The foundation of OmniAI Desktop: a fully functional desktop application with chat interface and basic model integration.
+The foundation of GradeGuru: a fully functional desktop application with chat interface and basic model integration.
 
 ### Features
 
@@ -121,7 +121,7 @@ The foundation of OmniAI Desktop: a fully functional desktop application with ch
 
 ### Overview
 
-Introduce a powerful plugin architecture that allows developers to extend OmniAI Desktop with custom functionality.
+Introduce a powerful plugin architecture that allows developers to extend GradeGuru with custom functionality.
 
 ### Features
 
@@ -388,7 +388,7 @@ Implement advanced reasoning capabilities including chain-of-thought, tree-of-th
 
 ### Overview
 
-Enable users to fine-tune, train, and optimize custom AI models directly within OmniAI Desktop.
+Enable users to fine-tune, train, and optimize custom AI models directly within GradeGuru.
 
 ### Features
 

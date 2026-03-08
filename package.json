@@ -1,7 +1,8 @@
 {
-  "name": "omni-ai-desktop",
+  "name": "gradeguru",
+  "productName": "GradeGuru",
   "version": "1.0.0",
-  "description": "A Windows desktop AI assistant application similar to ChatGPT's desktop app",
+  "description": "GradeGuru Desktop AI Assistant",
   "main": "src/main/main.js",
   "scripts": {
     "dev": "electron .",

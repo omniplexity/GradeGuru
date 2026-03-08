@@ -1,5 +1,5 @@
 /**
- * OmniAI Desktop - Sidebar Component
+ * GradeGuru - Sidebar Component
  * Manages conversation list, model selector, and settings access
  */
 

@@ -2,8 +2,8 @@
   "id": "example-plugin",
   "name": "Example Plugin",
   "version": "1.0.0",
-  "description": "A comprehensive example plugin demonstrating plugin development for OmniAI Desktop. Includes greeting, calculator, and conversation tools.",
-  "author": "OmniAI Team",
+  "description": "A comprehensive example plugin demonstrating plugin development for GradeGuru Desktop. Includes greeting, calculator, and conversation tools.",
+  "author": "GradeGuru Team",
   "main": "index.js",
   "permissions": {
     "network": true,

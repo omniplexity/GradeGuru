@@ -1,5 +1,6 @@
 appId: com.omniai.desktop
-productName: OmniAI Desktop
+productName: GradeGuru
+artifactName: GradeGuru-Setup-${version}.${ext}
 
 directories:
   output: dist
@@ -29,7 +30,7 @@ nsis:
   installerHeaderIcon: build/icon.ico
   createDesktopShortcut: true
   createStartMenuShortcut: true
-  shortcutName: OmniAI Desktop
+  shortcutName: GradeGuru
 
 portable:
   artifactName: "${productName}-${version}-portable.${ext}"

@@ -1,4 +1,4 @@
-# OmniAI Desktop - Production Build Script (Windows/PowerShell)
+# GradeGuru - Production Build Script (Windows/PowerShell)
 # This script builds the application for production distribution using electron-builder
 # 
 # Usage: .\scripts\build.ps1
@@ -66,7 +66,7 @@ function Show-BuildArtifacts {
 # ============================================================================
 
 Write-Host "============================================" -ForegroundColor Cyan
-Write-Host "  OmniAI Desktop - Production Build" -ForegroundColor Cyan
+Write-Host "  GradeGuru - Production Build" -ForegroundColor Cyan
 Write-Host "============================================" -ForegroundColor Cyan
 Write-Host ""
 

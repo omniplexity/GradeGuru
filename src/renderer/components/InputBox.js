@@ -1,5 +1,5 @@
 /**
- * OmniAI Desktop - InputBox Component
+ * GradeGuru - InputBox Component
  * Manages message input with auto-resize, send button, and keyboard handling
  */
 

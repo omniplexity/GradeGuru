@@ -35,7 +35,7 @@ class WindowManager {
       minHeight: this.minHeight,
       x: Math.floor((screenWidth - windowWidth) / 2),
       y: Math.floor((screenHeight - windowHeight) / 2),
-      title: 'OmniAI Desktop',
+      title: 'GradeGuru',
       icon: path.join(__dirname, '../../assets/icon.png'),
       show: false, // Show when ready
       webPreferences: {

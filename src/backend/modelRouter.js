@@ -1,5 +1,5 @@
 /**
- * OmniAI Desktop - Model Router
+ * GradeGuru - Model Router
  * Handles routing requests to multiple AI providers with model discovery,
  * configuration management, and streaming response handling.
  */
