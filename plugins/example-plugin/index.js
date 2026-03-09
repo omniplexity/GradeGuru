@@ -360,7 +360,7 @@ const plugin = {
       }
 
       // Build response with emoji
-      const response = `${timeGreeting}, ${name}! 👋\n\n`;
+      let response = `${timeGreeting}, ${name}! 👋\n\n`;
       response += `I'm the Example Plugin! I can help you with:\n`;
       response += `• /greet [name] - Greet someone\n`;
       response += `• /calc <expression> - Calculate math\n`;
@@ -416,7 +416,7 @@ const plugin = {
         return `Could not calculate: ${expression}\nError: ${calcError.message}`;
       }
 
-      const response = `📊 **Calculator**\n\n`;
+      let response = `📊 **Calculator**\n\n`;
       response += `Expression: \`${expression}\`\n`;
       response += `Result: **${result}**`;
 
@@ -452,7 +452,7 @@ const plugin = {
         conversationInfo = 'Not available';
       }
 
-      const response = `📦 **Example Plugin**\n\n`;
+      let response = `📦 **Example Plugin**\n\n`;
       response += `**Version:** ${this.version}\n`;
       response += `**Author:** ${this.author}\n`;
       response += `**Description:** ${this.description}\n\n`;
@@ -482,7 +482,7 @@ const plugin = {
     try {
       // If no args, show current settings
       if (args.length === 0) {
-        const response = `⚙️ **Plugin Settings**\n\n`;
+        let response = `⚙️ **Plugin Settings**\n\n`;
         response += `**Features:**\n`;
         response += Object.entries(this._config.features)
           .map(([key, value]) => `  • ${key}: ${value}`)

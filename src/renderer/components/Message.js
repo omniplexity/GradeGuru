@@ -278,6 +278,10 @@ class Message {
   }
 }
 
+if (typeof globalThis !== 'undefined') {
+  globalThis.Message = Message;
+}
+
 // Export for ES6 modules
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = Message;

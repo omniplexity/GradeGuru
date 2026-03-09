@@ -712,7 +712,7 @@ class ConversationStore extends EventEmitter {
     const results = [];
     const lowerQuery = query.toLowerCase();
 
-    for (const [id, conversation] of this.conversations) {
+    for (const [, conversation] of this.conversations) {
       // Search in title
       if (conversation.title.toLowerCase().includes(lowerQuery)) {
         results.push({ conversation, matchType: 'title' });

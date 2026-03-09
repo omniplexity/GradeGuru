@@ -91,10 +91,10 @@ For local AI inference, install one of:
 cd C:\Users\YourName\Projects
 
 # Clone the repository
-git clone https://github.com/your-org/grade-guru.git
+git clone https://github.com/omniplexity/GradeGuru.git
 
 # Navigate into the project
-cd grade-guru
+cd GradeGuru
 ```
 
 ### 2. Install Dependencies
@@ -120,8 +120,8 @@ npm ls --depth=0
 Expected output:
 
 ```
-grade-guru@1.0.0
-├── electron@28.0.0
+gradeguru@2.0.0
+├── electron@40.x.x
 ├── electron-builder@24.9.0
 ├── eslint@8.0.0
 └── jest@29.0.0
@@ -151,7 +151,7 @@ This will:
 When running `npm run dev`, you'll see:
 
 ```
-> grade-guru@1.0.0 dev
+> gradeguru@2.0.0 dev
 > electron .
 
 [App] Starting GradeGuru...
@@ -178,7 +178,7 @@ Understanding the project structure is essential for effective development.
 ### Directory Overview
 
 ```
-grade-guru/
+GradeGuru/
 ├── .github/                    # GitHub workflows and templates
 ├── build/                      # Build resources (icons, etc.)
 ├── dist/                       # Built application output
@@ -600,7 +600,7 @@ npm install electron --save-dev
 
 ### Getting Help
 
-1. Check [GitHub Issues](https://github.com/your-org/grade-guru/issues)
+1. Check [GitHub Issues](https://github.com/omniplexity/GradeGuru/issues)
 2. Search existing discussions
 3. Create a new issue with:
    - Steps to reproduce

@@ -7,6 +7,8 @@
  * ChatView - Manages the chat display area
  * Provides methods for rendering messages, scrolling, and clearing
  */
+const LegacyMessage = globalThis.Message;
+
 class ChatView {
   /**
    * @param {Object} options - Configuration options
@@ -68,7 +70,7 @@ class ChatView {
   appendMessage(message) {
     if (!this._container) return;
     
-    const messageComponent = new Message(message);
+    const messageComponent = new LegacyMessage(message);
     const messageElement = messageComponent.render();
     
     this._container.appendChild(messageElement);
@@ -93,7 +95,7 @@ class ChatView {
     
     const contentElement = messageElement.querySelector('.message-content');
     if (contentElement) {
-      contentElement.innerHTML = Message.formatContent(newContent);
+      contentElement.innerHTML = LegacyMessage.formatContent(newContent);
     }
   }
   

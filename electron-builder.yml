@@ -1,4 +1,4 @@
-appId: com.omniai.desktop
+appId: com.gradeguru.desktop
 productName: GradeGuru
 artifactName: GradeGuru-Setup-${version}.${ext}
 
@@ -7,8 +7,10 @@ directories:
   buildResources: build
 
 files:
+  - "src/**/*"
+  - "package.json"
+  - "node_modules/**/*"
   - "!**/.vscode/*"
-  - "!src/*"
   - "!electron-builder.yml"
   - "!{.eslintignore,.eslintrc.js,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}"
 
@@ -20,17 +22,14 @@ win:
     - target: portable
       arch:
         - x64
-  icon: build/icon.ico
 
 nsis:
   oneClick: false
   allowToChangeInstallationDirectory: true
-  installerIcon: build/icon.ico
-  uninstallerIcon: build/icon.ico
-  installerHeaderIcon: build/icon.ico
   createDesktopShortcut: true
   createStartMenuShortcut: true
   shortcutName: GradeGuru
+  uninstallDisplayName: GradeGuru
 
 portable:
   artifactName: "${productName}-${version}-portable.${ext}"

@@ -1,182 +1,54 @@
-/**
- * Preload Script
- * Exposes safe APIs to the renderer process via contextBridge
- */
-
 const { contextBridge, ipcRenderer } = require('electron');
 
-// Expose protected methods that allow the renderer process to use
-// ipcRenderer without exposing the entire object
-contextBridge.exposeInMainWorld('electronAPI', {
-  // ====================
-  // IPC Communication
-  // ====================
-
-  /**
-   * Send a message to the main process
-   * @param {string} channel - The IPC channel to send on
-   * @param {*} data - Data to send
-   * @returns {Promise<*>} Response from main process
-   */
-  send: (channel, data) => {
-    const validChannels = [
-      'message:send',
-      'plugin:install',
-      'plugin:uninstall',
-      'plugin:list',
-      'settings:get',
-      'settings:set',
-      'model:select',
-      'model:list',
-    ];
-    if (validChannels.includes(channel)) {
-      return ipcRenderer.invoke(channel, data);
-    }
-    throw new Error(`Invalid channel: ${channel}`);
+const api = {
+  app: {
+    bootstrap: () => ipcRenderer.invoke('app:bootstrap'),
+    onDataMutated: (callback) => {
+      const listener = (_event, payload) => callback(payload);
+      ipcRenderer.on('data:mutated', listener);
+      return () => ipcRenderer.removeListener('data:mutated', listener);
+    },
   },
-
-  /**
-   * Receive messages from the main process
-   * @param {string} channel - The IPC channel to listen on
-   * @param {Function} callback - Callback function to handle the message
-   */
-  on: (channel, callback) => {
-    const validChannels = [
-      'model:response',
-      'model:stream',
-      'model:error',
-      'plugin:installed',
-      'plugin:uninstalled',
-      'settings:updated',
-      'window:maximized',
-      'window:unmaximized',
-    ];
-    if (validChannels.includes(channel)) {
-      // Create a subscription and return cleanup function
-      const subscription = (event, ...args) => callback(...args);
-      ipcRenderer.on(channel, subscription);
-      return () => ipcRenderer.removeListener(channel, subscription);
-    }
-    throw new Error(`Invalid channel: ${channel}`);
+  classes: {
+    list: () => ipcRenderer.invoke('classes:list'),
+    create: (payload) => ipcRenderer.invoke('classes:create', payload),
   },
-
-  /**
-   * Remove a specific listener
-   * @param {string} channel
-   */
-  removeListener: (channel, callback) => {
-    ipcRenderer.removeListener(channel, callback);
+  assignments: {
+    list: (classId) => ipcRenderer.invoke('assignments:list', classId),
+    get: (assignmentId) => ipcRenderer.invoke('assignment:get', assignmentId),
+    create: (payload) => ipcRenderer.invoke('assignment:create', payload),
+    update: (payload) => ipcRenderer.invoke('assignment:update', payload),
+    attachSource: (payload) => ipcRenderer.invoke('assignment:attachSource', payload),
   },
-
-  // ====================
-  // Window Controls
-  // ====================
-
-  /**
-   * Minimize the window
-   */
-  windowMinimize: () => ipcRenderer.invoke('window:minimize'),
-
-  /**
-   * Maximize or restore the window
-   */
-  windowToggleMaximize: () => ipcRenderer.invoke('window:toggle-maximize'),
-
-  /**
-   * Close the window
-   */
-  windowClose: () => ipcRenderer.invoke('window:close'),
-
-  /**
-   * Check if window is maximized
-   * @returns {Promise<boolean>}
-   */
-  windowIsMaximized: () => ipcRenderer.invoke('window:is-maximized'),
-
-  /**
-   * Listen for maximize state changes
-   * @param {Function} callback
-   */
-  onWindowMaximizeChange: (callback) => {
-    ipcRenderer.on('window:maximized', () => callback(true));
-    ipcRenderer.on('window:unmaximized', () => callback(false));
+  chats: {
+    create: (assignmentId) => ipcRenderer.invoke('chat:create', assignmentId),
+    list: (assignmentId) => ipcRenderer.invoke('chat:list', assignmentId),
+    messages: (chatId) => ipcRenderer.invoke('chat:messages', chatId),
+    send: (payload) => ipcRenderer.invoke('chat:send', payload),
+    onStream: (callback) => {
+      const listener = (_event, chunk) => callback(chunk);
+      ipcRenderer.on('chat:stream', listener);
+      return () => ipcRenderer.removeListener('chat:stream', listener);
+    },
   },
+  tools: {
+    list: () => ipcRenderer.invoke('tools:list'),
+    run: (payload) => ipcRenderer.invoke('tools:run', payload),
+  },
+  models: {
+    list: () => ipcRenderer.invoke('models:list'),
+    select: (modelId) => ipcRenderer.invoke('models:select', modelId),
+  },
+  settings: {
+    get: () => ipcRenderer.invoke('settings:get'),
+    set: (patch) => ipcRenderer.invoke('settings:set', patch),
+  },
+  plugins: {
+    list: () => ipcRenderer.invoke('plugins:list'),
+  },
+  dialog: {
+    openFiles: (options) => ipcRenderer.invoke('dialog:openFiles', options),
+  },
+};
 
-  // ====================
-  // Plugin Management
-  // ====================
-
-  /**
-   * Get list of installed plugins
-   * @returns {Promise<Array>}
-   */
-  getPlugins: () => ipcRenderer.invoke('plugin:list'),
-
-  /**
-   * Install a plugin
-   * @param {string} pluginId
-   * @returns {Promise<Object>}
-   */
-  installPlugin: (pluginId) => ipcRenderer.invoke('plugin:install', pluginId),
-
-  /**
-   * Uninstall a plugin
-   * @param {string} pluginId
-   * @returns {Promise<Object>}
-   */
-  uninstallPlugin: (pluginId) => ipcRenderer.invoke('plugin:uninstall', pluginId),
-
-  // ====================
-  // Settings
-  // ====================
-
-  /**
-   * Get settings
-   * @param {string} key - Optional settings key
-   * @returns {Promise<Object>}
-   */
-  getSettings: (key) => ipcRenderer.invoke('settings:get', key),
-
-  /**
-   * Set settings
-   * @param {string} key - Settings key
-   * @param {*} value - Settings value
-   * @returns {Promise<Object>}
-   */
-  setSettings: (key, value) => ipcRenderer.invoke('settings:set', key, value),
-
-  // ====================
-  // Model Management
-  // ====================
-
-  /**
-   * Get list of available models
-   * @returns {Promise<Array>}
-   */
-  getModels: () => ipcRenderer.invoke('model:list'),
-
-  /**
-   * Select a model
-   * @param {string} modelId
-   * @returns {Promise<Object>}
-   */
-  selectModel: (modelId) => ipcRenderer.invoke('model:select', modelId),
-
-  // ====================
-  // App Info
-  // ====================
-
-  /**
-   * Get app version
-   * @returns {Promise<string>}
-   */
-  getAppVersion: () => ipcRenderer.invoke('app:version'),
-
-  /**
-   * Get platform info
-   * @returns {Promise<string>}
-   */
-  getPlatform: () => ipcRenderer.invoke('app:platform'),
-});
-
-console.log('[Preload] ElectronAPI exposed to renderer');
+contextBridge.exposeInMainWorld('gradeGuru', api);

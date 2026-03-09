@@ -1,0 +1,5 @@
+dist/
+out/
+release/
+node_modules/
+build/*.tmp
